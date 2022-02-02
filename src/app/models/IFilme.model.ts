@@ -4,4 +4,5 @@ export interface IFilme {
   genero: string[];
   cartaz: string;
   classificacao: number;
+  pagina?: string;
 }

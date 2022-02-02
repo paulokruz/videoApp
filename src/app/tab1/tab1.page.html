@@ -16,25 +16,23 @@
 
   <ion-list>
     <ion-item-sliding *ngFor="let filme of listaVideos">
-      <ion-item lines="full">
-        <ion-thumbnail slot="start">
-          <img [src]="filme.cartaz" />
-        </ion-thumbnail>
-        <ion-label class="ion-text-wrap">
-          <div>
-            <h1>{{filme.nome}}</h1>
-            <p>{{filme.descricao}}</p>
-              <ion-badge color="light" *ngFor="let genero of filme.genero">
-                {{genero}}
-              </ion-badge>
-          </div>
-        </ion-label>
-        <ion-chip>
-          <ion-label color="success" outline
-            >{{filme.classificacao}}%</ion-label
-          >
-        </ion-chip>
-      </ion-item>
+        <ion-item lines="full" (click)="exibirFilme(filme)">
+          <ion-thumbnail slot="start">
+            <img [src]="filme.cartaz" />
+          </ion-thumbnail>
+          <ion-label class="ion-text-wrap">
+            <div>
+              <h1>{{filme.nome}}</h1>
+              <p>{{filme.descricao}}</p>
+                <ion-badge color="light" *ngFor="let genero of filme.genero">
+                  {{genero}}
+                </ion-badge>
+            </div>
+          </ion-label>
+          <ion-chip>
+            <ion-label color="success" outline>{{filme.classificacao}}%</ion-label>
+          </ion-chip>
+        </ion-item>
 
       <ion-item-options side="end">
         <ion-item-option color="laranja" (click)="exibirAlertFavorito()">
