@@ -23,10 +23,6 @@ const routes: Routes = [
     loadChildren: () => import('./filmes/the-whell-of-time/the-whell-of-time.module').then( m => m.TheWhellOfTimePageModule)
   },
   {
-    path: 'dados-filmes',
-    loadChildren: () => import('./dados-filmes/dados-filmes.module').then( m => m.DadosFilmesPageModule)
-  },
-  {
     path: 'dados-filme',
     loadChildren: () => import('./dados-filme/dados-filme.module').then( m => m.DadosFilmePageModule)
   }
