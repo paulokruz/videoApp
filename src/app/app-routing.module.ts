@@ -3,28 +3,21 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path:'',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'mortal-kombat',
-    loadChildren: () => import('./filmes/mortal-kombat/mortal-kombat.module').then( m => m.MortalKombatPageModule)
-  },
-  {
-    path: 'riverdance',
-    loadChildren: () => import('./filmes/riverdance/riverdance.module').then( m => m.RiverdancePageModule)
-  },
-  {
-    path: 'mother-android',
-    loadChildren: () => import('./filmes/mother-android/mother-android.module').then( m => m.MotherAndroidPageModule)
-  },
-  {
-    path: 'the-whell-of-time',
-    loadChildren: () => import('./filmes/the-whell-of-time/the-whell-of-time.module').then( m => m.TheWhellOfTimePageModule)
-  },
-  {
     path: 'dados-filme',
     loadChildren: () => import('./dados-filme/dados-filme.module').then( m => m.DadosFilmePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   }
 ];
 @NgModule({

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RiverdancePageRoutingModule } from './riverdance-routing.module';
+import { LoginPageRoutingModule } from './login-routing.module';
 
-import { RiverdancePage } from './riverdance.page';
+import { LoginPage } from './login.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RiverdancePageRoutingModule
+    LoginPageRoutingModule
   ],
-  declarations: [RiverdancePage]
+  declarations: [LoginPage]
 })
-export class RiverdancePageModule {}
+export class LoginPageModule {}
